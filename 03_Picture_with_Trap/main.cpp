@@ -78,12 +78,10 @@ int main(int argv, char** args){
     bool quit = false;
     //Event handler
     SDL_Event e;
-    while( !quit ) {
-        while( SDL_PollEvent( &e ) != 0 )
-        {
+    while(!quit) {
+        while(SDL_PollEvent(&e) != 0){
             //User requests quit
-            if( e.type == SDL_QUIT )
-            {
+            if( e.type == SDL_QUIT ){
                 quit = true;
             }
         }
